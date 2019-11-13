@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2019_11_13_112028) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "recruiters", force: :cascade do |t|
+    t.string "company"
+    t.integer "contact_number"
+    t.text "bio"
+    t.text "profile_image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
