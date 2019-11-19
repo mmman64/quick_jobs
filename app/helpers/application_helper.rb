@@ -5,7 +5,8 @@ module ApplicationHelper
     elsif current_applicant
       link_to "Logout App", destroy_applicant_session_path, method: :delete
     else
-      link_to "Login", destroy_applicant_session_path, method: :delete
+      (link_to "Recruiter Login", new_recruiter_session_path) + " " +
+      (link_to "Applicant Login", new_applicant_session_path)
     end
   end
 end
