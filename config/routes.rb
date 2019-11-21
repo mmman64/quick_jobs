@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  # devise_for :recruiters, skip: [:registrations]
-  # devise_for :applicants, skip: [:registrations]
-
   devise_for :applicants, path: "applicants",
                           controllers: {
                             sessions: "applicants/sessions",

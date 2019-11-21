@@ -9,12 +9,12 @@ module Accessible
   protected
 
   def check_user
-    # if current_applicant
-    #   flash.clear
-    #   redirect_to(authenticated_applicant_root_path) && return
-    # elsif current_recruiter
-    #   flash.clear
-    #   redirect_to(authenticated_recruiter_root_path) && return
-    # end
+    if current_applicant
+      flash.clear
+      redirect_to(applicant_root_path) && return
+    elsif current_recruiter
+      flash.clear
+      redirect_to(recruiter_root_path) && return
+    end
   end
 end
